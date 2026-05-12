@@ -1,0 +1,61 @@
+/* A teljes szekció háttere és elrendezése */
+.survey-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* Világos szürke háttér, hogy elváljon a többi résztől */
+}
+
+/* Fejléc stílusa */
+.survey-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.survey-header h2 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 2.5rem;
+  color: #121619;
+  margin-bottom: 10px;
+}
+
+.survey-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* A Google Form kártya stílusa */
+.google-form-wrapper {
+  width: 100%;
+  max-width: 800px; /* Ne legyen túl széles, hogy olvasható maradjon */
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Lágy árnyék a mélységhez */
+  border: 1px solid #eee;
+  overflow: hidden; /* A lekerekített sarkok miatt fontos */
+  transition: transform 0.3s ease;
+}
+
+/* Egy kis interakció, ha ráközelít az egér */
+.google-form-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* Az iframe finomhangolása */
+.google-form-iframe {
+  border-radius: 15px;
+  display: block;
+}
+
+/* Reszponzivitás: mobilon legyen kisebb a padding */
+@media (max-width: 600px) {
+  .survey-header h2 {
+    font-size: 1.8rem;
+  }
+  .survey-section {
+    padding: 30px 10px;
+  }
+}
